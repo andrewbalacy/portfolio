@@ -1,36 +1,244 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+> A premium software product that showcases my work, engineering philosophy, and journey into Health Technology.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Overview
+
+This repository is not a traditional developer portfolio or online résumé.
+
+It is intentionally designed to feel like a polished software product that happens to showcase my work. Every interaction, transition, animation, and design decision should communicate craftsmanship, systems thinking, engineering quality, and product intuition before a visitor even reads my résumé.
+
+The portfolio serves as the professional hub for everything I build.
+
+```text
+Resume
+   ↓
+Portfolio
+   ↓
+Slate
+   ↓
+GitHub
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Each layer reinforces the next, creating a cohesive narrative rather than a collection of unrelated projects.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Vision
 
-## Learn More
+Build a portfolio that immediately communicates:
 
-To learn more about Next.js, take a look at the following resources:
+- Engineering quality
+- Product thinking
+- Design craftsmanship
+- Systems thinking
+- Attention to detail
+- Premium execution
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The goal is for recruiters, hiring managers, and engineers to think:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+> "This feels like a product—not just another portfolio."
 
-## Deploy on Vercel
+before they ever click on a project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Purpose
+
+The portfolio exists to tell a story.
+
+Instead of listing technologies or projects, it demonstrates how my background in healthcare evolved into software engineering and AI.
+
+Everything on this website should reinforce that narrative.
+
+```text
+Medical Assistant
+        ↓
+Health Informatics
+        ↓
+Software Engineering
+        ↓
+AI + Healthcare Technology
+```
+
+Slate represents the first major product born from that journey and serves as the centerpiece of the portfolio.
+
+---
+
+# Project Philosophy
+
+Quality over quantity.
+
+I intentionally maintain a small ecosystem of meaningful projects rather than creating numerous unrelated applications simply to fill a portfolio.
+
+Current development ecosystem:
+
+```text
+Developer/
+
+├── portfolio
+└── slate
+```
+
+Future repositories will only be created if they meaningfully contribute to my growth in:
+
+- Health Technology
+- Artificial Intelligence
+- Health Informatics
+- Software Engineering
+- Healthcare Analytics
+
+Every project should have a purpose.
+
+---
+
+# Design Principles
+
+The portfolio should feel:
+
+- Minimal
+- Premium
+- Cinematic
+- Intentional
+- Fast
+- Modern
+
+Inspired by product experiences rather than traditional portfolio websites.
+
+Every animation should have a reason.
+
+Every transition should feel smooth.
+
+Every section should feel handcrafted.
+
+Avoid unnecessary visual noise or generic templates.
+
+---
+
+# Technology Stack
+
+## Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+## Deployment
+
+- Vercel
+
+## Version Control
+
+- Git
+- GitHub
+
+---
+
+# Featured Project
+
+Slate is intentionally the centerpiece of the portfolio.
+
+Rather than appearing as a simple project card, Slate receives a dedicated case study explaining:
+
+- The problem
+- Why it was built
+- Design philosophy
+- System architecture
+- Technologies used
+- Engineering decisions
+- Challenges encountered
+- Lessons learned
+- Future roadmap
+
+The portfolio exists largely to tell Slate's story.
+
+---
+
+# Repository Documentation
+
+This repository is documented similarly to a production software project.
+
+| File | Purpose |
+|------|----------|
+| `README.md` | Project overview and vision |
+| `ARCHITECTURE.md` | Overall application structure |
+| `DECISIONS.md` | Important product and engineering decisions |
+| `TODO.md` | Active roadmap and future work |
+
+---
+
+# Development Workflow
+
+Every feature follows the same workflow.
+
+```bash
+git status
+git add .
+git commit -m "Describe work"
+git push
+```
+
+GitHub serves as the permanent source of truth for the project.
+
+---
+
+# New Machine Setup
+
+When moving to a new computer:
+
+```bash
+mkdir Developer
+cd Developer
+
+git clone <portfolio-repository>
+git clone <slate-repository>
+
+cd portfolio
+npm install
+npm run dev
+```
+
+Repeat for the Slate repository.
+
+The entire development environment can be restored from GitHub.
+
+---
+
+# Long-Term Vision
+
+This repository is only the beginning.
+
+The long-term ecosystem looks like:
+
+```text
+Portfolio
+      │
+      ▼
+Slate
+      │
+      ▼
+Healthcare Products
+      │
+      ▼
+MSHI Capstone
+      │
+      ▼
+Career in Health Technology & AI
+```
+
+Every project should reinforce the same narrative rather than exist as disconnected work.
+
+---
+
+# Guiding Principle
+
+The portfolio should communicate who I am before someone ever speaks to me.
+
+If visitors leave thinking:
+
+> "This person clearly cares about building exceptional products."
+
+then the portfolio has accomplished its purpose.
