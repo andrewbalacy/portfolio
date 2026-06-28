@@ -2,7 +2,7 @@ export default function ScrollIndicator() {
   return (
     <div
       className="animate-fade-in flex flex-col items-center gap-2"
-      style={{ animationDelay: "1000ms" }}
+      style={{ animationDelay: "840ms" }}
       aria-hidden="true"
     >
       <span className="text-[10px] font-medium uppercase tracking-[0.14em] text-subtle">
