@@ -1,0 +1,23 @@
+interface NavLinkProps {
+  href: string;
+  children: React.ReactNode;
+  onClick?: () => void;
+  className?: string;
+}
+
+export default function NavLink({
+  href,
+  children,
+  onClick,
+  className,
+}: NavLinkProps) {
+  return (
+    <a
+      href={href}
+      onClick={onClick}
+      className={`text-sm text-subtle transition-colors hover:text-foreground focus-ring${className ? ` ${className}` : ""}`}
+    >
+      {children}
+    </a>
+  );
+}
