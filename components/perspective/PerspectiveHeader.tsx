@@ -15,8 +15,9 @@ export default function PerspectiveHeader() {
       <p className="text-[11px] font-medium uppercase tracking-[0.15em] text-subtle">
         The Perspective
       </p>
-      <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
-        Every product I build starts with a problem I experienced firsthand.
+      <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
+        Before I learned how to build software, I learned what was worth
+        building.
       </p>
     </div>
   );
