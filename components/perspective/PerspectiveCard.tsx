@@ -7,7 +7,6 @@ interface PerspectiveCardProps {
   title: string;
   body: string;
   index: number;
-  featured?: boolean;
 }
 
 export default function PerspectiveCard({
@@ -15,7 +14,6 @@ export default function PerspectiveCard({
   title,
   body,
   index,
-  featured = false,
 }: PerspectiveCardProps) {
   const [ref, isVisible] = useInView();
 
@@ -30,20 +28,10 @@ export default function PerspectiveCard({
       <p className="text-[11px] font-medium uppercase tracking-[0.15em] text-subtle">
         {number}
       </p>
-      <h3
-        className={`tracking-heading text-foreground ${
-          featured
-            ? "mt-5 text-3xl font-semibold sm:text-4xl"
-            : "mt-4 text-3xl font-semibold sm:text-4xl"
-        }`}
-      >
+      <h3 className="mt-4 text-3xl font-semibold tracking-heading text-foreground sm:text-4xl">
         {title}
       </h3>
-      <p
-        className={`leading-relaxed text-muted ${
-          featured ? "mt-6 text-lg" : "mt-5 text-base"
-        }`}
-      >
+      <p className="mt-5 text-base leading-relaxed text-muted">
         {body}
       </p>
     </div>

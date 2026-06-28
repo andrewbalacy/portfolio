@@ -12,10 +12,10 @@ export default function PerspectiveHeader() {
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
     >
-      <p className="text-[11px] font-medium uppercase tracking-[0.15em] text-subtle">
+      <p className="text-[13px] font-medium uppercase tracking-[0.24em] text-subtle">
         The Perspective
       </p>
-      <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
+      <p className="mt-8 text-xl leading-snug text-muted">
         Before I learned how to build software, I learned what was worth
         building.
       </p>
