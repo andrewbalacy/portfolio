@@ -5,7 +5,7 @@ import SlateHeroImage from "./SlateHeroImage";
 export default function SlateReveal() {
   return (
     <section id="slate" aria-label="Slate" className="relative">
-      <div className="container-portfolio pb-24 pt-40 md:pb-32 md:pt-56">
+      <div className="container-portfolio pb-24 pt-20 md:pb-32 md:pt-28">
         <SlateTransition />
 
         {/* Chapter break — separates the editorial bridge from the product reveal */}
