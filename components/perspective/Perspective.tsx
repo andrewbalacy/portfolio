@@ -34,7 +34,7 @@ export default function Perspective() {
     <section
       id="perspective"
       aria-label="The Perspective"
-      className="relative"
+      className="relative snap-section"
     >
       <div className="container-portfolio py-32 md:py-40">
         <PerspectiveHeader />

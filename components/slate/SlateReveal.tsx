@@ -4,7 +4,7 @@ import SlateHeroImage from "./SlateHeroImage";
 
 export default function SlateReveal() {
   return (
-    <section id="slate" aria-label="Slate" className="relative">
+    <section id="slate" aria-label="Slate" className="relative snap-section">
       <div className="container-portfolio pb-24 pt-20 md:pb-32 md:pt-28">
         <SlateTransition />
 

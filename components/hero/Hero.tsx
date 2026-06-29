@@ -8,7 +8,7 @@ export default function Hero() {
     <section
       id="about"
       aria-label="Introduction"
-      className="relative flex min-h-dvh flex-col overflow-hidden"
+      className="relative flex min-h-dvh flex-col overflow-hidden snap-section"
     >
       <HeroBackground />
 
