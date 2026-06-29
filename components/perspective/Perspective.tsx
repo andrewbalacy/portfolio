@@ -1,3 +1,6 @@
+"use client";
+
+import { useInView } from "@/hooks/useInView";
 import PerspectiveHeader from "./PerspectiveHeader";
 import PerspectiveCard from "./PerspectiveCard";
 
@@ -25,6 +28,8 @@ const cards = [
 ];
 
 export default function Perspective() {
+  const [gridRef, isVisible] = useInView(0.1);
+
   return (
     <section
       id="perspective"
@@ -37,12 +42,16 @@ export default function Perspective() {
         {/* Single editorial rule — one chapter break, not four card borders */}
         <div className="mt-10 border-t border-border md:mt-14" />
 
-        <div className="mt-8 grid grid-cols-1 gap-x-16 md:mt-10 md:grid-cols-2 lg:gap-x-24">
+        <div
+          ref={gridRef}
+          className="mt-8 grid grid-cols-1 gap-x-16 md:mt-10 md:grid-cols-2 lg:gap-x-24"
+        >
           {cards.map((card, index) => (
             <PerspectiveCard
               key={card.number}
               {...card}
               index={index}
+              isVisible={isVisible}
             />
           ))}
         </div>

@@ -1,12 +1,9 @@
-"use client";
-
-import { useInView } from "@/hooks/useInView";
-
 interface PerspectiveCardProps {
   number: string;
   title: string;
   body: string;
   index: number;
+  isVisible: boolean;
 }
 
 export default function PerspectiveCard({
@@ -14,16 +11,14 @@ export default function PerspectiveCard({
   title,
   body,
   index,
+  isVisible,
 }: PerspectiveCardProps) {
-  const [ref, isVisible] = useInView();
-
   return (
     <div
-      ref={ref}
       className={`pb-14 pt-10 transition-[opacity,transform] duration-700 ease-out-expo md:pb-16 md:pt-12 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
       }`}
-      style={{ transitionDelay: isVisible ? `${index * 80}ms` : "0ms" }}
+      style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
     >
       <p className="text-[11px] font-medium uppercase tracking-[0.15em] text-subtle">
         {number}

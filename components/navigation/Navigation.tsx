@@ -6,17 +6,32 @@ import NavLink from "./NavLink";
 
 const NAV_LINKS = [
   { href: "#about", label: "About" },
+  { href: "#perspective", label: "Perspective" },
   { href: "#slate", label: "Slate" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
 ] as const;
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 8);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 8);
+
+      // Activate the last section whose top edge is above 35% of the viewport
+      const threshold = window.innerHeight * 0.35;
+      let active = NAV_LINKS[0].href.slice(1);
+      for (const link of NAV_LINKS) {
+        const el = document.getElementById(link.href.slice(1));
+        if (el && el.getBoundingClientRect().top <= threshold) {
+          active = link.href.slice(1);
+        }
+      }
+      setActiveSection(active);
+    };
+
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -45,7 +60,11 @@ export default function Navigation() {
               aria-label="Primary navigation"
             >
               {NAV_LINKS.map((link) => (
-                <NavLink key={link.href} href={link.href}>
+                <NavLink
+                  key={link.href}
+                  href={link.href}
+                  active={activeSection === link.href.slice(1)}
+                >
                   {link.label}
                 </NavLink>
               ))}
@@ -95,26 +114,38 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile navigation */}
-        {mobileOpen && (
-          <div id="mobile-nav" className="border-t border-border md:hidden">
-            <nav
-              className="container-portfolio flex flex-col py-4"
-              aria-label="Mobile navigation"
-            >
-              {NAV_LINKS.map((link) => (
-                <NavLink
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="block py-3 text-base"
-                >
-                  {link.label}
-                </NavLink>
-              ))}
-            </nav>
+        {/* Mobile navigation — always in DOM, height animated via CSS grid trick */}
+        <div
+          id="mobile-nav"
+          aria-hidden={!mobileOpen}
+          className={`grid overflow-hidden transition-[grid-template-rows,opacity] ease-out-expo md:hidden ${
+            mobileOpen
+              ? "grid-rows-[1fr] opacity-100 duration-300"
+              : "grid-rows-[0fr] opacity-0 duration-200"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="border-t border-border">
+              <nav
+                className="container-portfolio flex flex-col py-4"
+                aria-label="Mobile navigation"
+              >
+                {NAV_LINKS.map((link) => (
+                  <NavLink
+                    key={link.href}
+                    href={link.href}
+                    active={activeSection === link.href.slice(1)}
+                    onClick={() => setMobileOpen(false)}
+                    className="block py-3 text-base"
+                  >
+                    {link.label}
+                  </NavLink>
+                ))}
+              </nav>
+            </div>
           </div>
-        )}
+        </div>
+
       </div>
     </header>
   );

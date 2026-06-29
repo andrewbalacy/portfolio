@@ -6,7 +6,7 @@ import ScrollIndicator from "./ScrollIndicator";
 export default function Hero() {
   return (
     <section
-      id="hero"
+      id="about"
       aria-label="Introduction"
       className="relative flex min-h-dvh flex-col overflow-hidden"
     >

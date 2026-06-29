@@ -3,6 +3,7 @@ interface NavLinkProps {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
+  active?: boolean;
 }
 
 export default function NavLink({
@@ -10,12 +11,18 @@ export default function NavLink({
   children,
   onClick,
   className,
+  active,
 }: NavLinkProps) {
   return (
     <a
       href={href}
       onClick={onClick}
-      className={`text-sm text-subtle transition-colors hover:text-foreground focus-ring${className ? ` ${className}` : ""}`}
+      aria-current={active ? "true" : undefined}
+      className={`text-sm transition-colors focus-ring ${
+        active
+          ? "text-foreground"
+          : "text-subtle hover:text-foreground"
+      }${className ? ` ${className}` : ""}`}
     >
       {children}
     </a>
