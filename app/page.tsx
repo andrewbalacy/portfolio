@@ -1,13 +1,20 @@
 import Hero from "@/components/hero/Hero";
 import Perspective from "@/components/perspective/Perspective";
 import SlateReveal from "@/components/slate/SlateReveal";
+import SectionFocus from "@/components/shared/SectionFocus";
 
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <Perspective />
-      <SlateReveal />
+      <SectionFocus>
+        <Hero />
+      </SectionFocus>
+      <SectionFocus>
+        <Perspective />
+      </SectionFocus>
+      <SectionFocus>
+        <SlateReveal />
+      </SectionFocus>
     </main>
   );
 }
