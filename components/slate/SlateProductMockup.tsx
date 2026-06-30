@@ -127,20 +127,33 @@ export default function SlateProductMockup() {
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/[0.07]"
         />
 
-        {/* Hover affordance — fades in after animation completes */}
+        {/* Hover overlay — UI recedes behind dark glass, action surfaces */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute right-5 top-4 z-10 md:right-7"
+          className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center"
           style={{
-            opacity: showHover ? 1 : 0,
-            transform: showHover ? "translateY(0)" : "translateY(4px)",
+            backgroundColor: showHover ? "rgba(0,0,0,0.55)" : "rgba(0,0,0,0)",
+            backdropFilter: showHover ? "blur(2px)" : "blur(0px)",
+            WebkitBackdropFilter: showHover ? "blur(2px)" : "blur(0px)",
             transition:
-              "opacity 300ms cubic-bezier(0.16,1,0.3,1), transform 300ms cubic-bezier(0.16,1,0.3,1)",
+              "background-color 350ms cubic-bezier(0.16,1,0.3,1), backdrop-filter 350ms cubic-bezier(0.16,1,0.3,1), -webkit-backdrop-filter 350ms cubic-bezier(0.16,1,0.3,1)",
           }}
         >
-          <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/40">
-            Open Project ↗
-          </span>
+          <div
+            style={{
+              opacity: showHover ? 1 : 0,
+              transform: showHover ? "translateY(0) scale(1)" : "translateY(8px) scale(0.97)",
+              transition:
+                "opacity 300ms cubic-bezier(0.16,1,0.3,1), transform 300ms cubic-bezier(0.16,1,0.3,1)",
+              transitionDelay: showHover ? "50ms" : "0ms",
+            }}
+          >
+            <div className="rounded-full border border-white/[0.18] bg-white/[0.06] px-6 py-3">
+              <span className="text-sm font-medium tracking-wide text-white/90">
+                Explore Slate →
+              </span>
+            </div>
+          </div>
         </div>
 
         <div className="relative p-6 md:p-8">
