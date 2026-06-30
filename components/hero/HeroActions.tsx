@@ -11,10 +11,13 @@ export default function HeroActions() {
         Explore Slate
       </a>
       <a
-        href="/resume"
+        href="/Andrew_Balacy_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open Andrew Balacy resume PDF in a new tab."
         className="focus-ring inline-flex h-11 items-center rounded-full border border-border px-6 text-sm font-medium text-muted transition-colors duration-200 hover:border-white/[0.14] hover:text-foreground"
       >
-        Resume
+        View Resume →
       </a>
     </div>
   );
