@@ -1,6 +1,6 @@
 import SlateTransition from "./SlateTransition";
 import SlateWordmark from "./SlateWordmark";
-import SlateHeroImage from "./SlateHeroImage";
+import SlateProductMockup from "./SlateProductMockup";
 
 export default function SlateReveal() {
   return (
@@ -14,12 +14,12 @@ export default function SlateReveal() {
           aria-hidden="true"
         />
 
-        <div className="mt-12 md:mt-16">
+        <div className="mt-8 md:mt-10">
           <SlateWordmark />
         </div>
 
-        <div className="mt-16 md:mt-24">
-          <SlateHeroImage />
+        <div className="mt-10 md:mt-14">
+          <SlateProductMockup />
         </div>
       </div>
     </section>
