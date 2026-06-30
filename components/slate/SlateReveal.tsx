@@ -8,17 +8,16 @@ export default function SlateReveal() {
       <div className="container-portfolio pb-24 pt-20 md:pb-32 md:pt-28">
         <SlateTransition />
 
-        {/* Chapter break — separates the editorial bridge from the product reveal */}
-        <div
-          className="mt-12 border-t border-border md:mt-16"
-          aria-hidden="true"
-        />
+        {/* Chapter break — editorial rule, width intentionally shorter than full */}
+        <div className="mt-14 md:mt-20" aria-hidden="true">
+          <div className="w-24 border-t border-border" />
+        </div>
 
-        <div className="mt-8 md:mt-10">
+        <div className="mt-6 md:mt-8">
           <SlateWordmark />
         </div>
 
-        <div className="mt-10 md:mt-14">
+        <div className="mt-6 md:mt-10">
           <SlateProductMockup />
         </div>
       </div>

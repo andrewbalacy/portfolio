@@ -15,7 +15,7 @@ export default function SlateTransition() {
       <p className="text-xl leading-snug text-muted sm:text-2xl">
         Eventually, I stopped looking for the right tool.
       </p>
-      <p className="mt-2 text-xl leading-snug text-foreground sm:text-2xl">
+      <p className="mt-2 text-xl font-semibold leading-snug text-foreground sm:text-2xl">
         I built it instead.
       </p>
     </div>
