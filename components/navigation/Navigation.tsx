@@ -8,6 +8,7 @@ const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#perspective", label: "Perspective" },
   { href: "#slate", label: "Slate" },
+  { href: "#orthointake", label: "OrthoIntake" },
 ] as const;
 
 export default function Navigation() {

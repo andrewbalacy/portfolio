@@ -49,7 +49,7 @@ export default function HeroActions() {
             Explore Slate
           </a>
           <a
-            href="/Andrew_Balacy_Resume.pdf"
+            href="/resume/Andrew_Balacy_Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open Andrew Balacy resume PDF in a new tab."
