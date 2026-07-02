@@ -39,8 +39,10 @@ export default function Navigation() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 animate-fade-down">
       <div
-        className={`glass-elevated border-b transition-colors ${
-          scrolled ? "border-border" : "border-transparent"
+        className={`border-b transition-all duration-300 ease-out ${
+          scrolled
+            ? "bg-background/80 backdrop-blur-xl backdrop-saturate-150 border-white/[0.07]"
+            : "bg-transparent backdrop-blur-none border-transparent"
         }`}
       >
         <div className="container-portfolio">
