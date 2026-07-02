@@ -20,8 +20,8 @@ export default function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 8);
 
-      // Activate the last section whose top edge is above 35% of the viewport
-      const threshold = window.innerHeight * 0.35;
+      // Activate the last section whose top edge is above 75% of the viewport
+      const threshold = window.innerHeight * 0.75;
       let active = NAV_LINKS[0].href.slice(1);
       for (const link of NAV_LINKS) {
         const el = document.getElementById(link.href.slice(1));

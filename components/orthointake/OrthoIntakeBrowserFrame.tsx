@@ -103,11 +103,11 @@ export default function OrthoIntakeBrowserFrame() {
           style={{ backgroundColor: "#111111" }}
         >
           <div className="flex items-center gap-3 px-4 py-3">
-            {/* Traffic light dots — neutral, no color */}
-            <div className="flex shrink-0 items-center gap-1.5" aria-hidden="true">
-              <span className="h-2.5 w-2.5 rounded-full bg-white/[0.12]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-white/[0.12]" />
-              <span className="h-2.5 w-2.5 rounded-full bg-white/[0.12]" />
+            {/* macOS window controls */}
+            <div className="flex shrink-0 items-center gap-2" aria-hidden="true">
+              <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
+              <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
+              <span className="h-3 w-3 rounded-full bg-[#28C840]" />
             </div>
 
             {/* Address bar */}
