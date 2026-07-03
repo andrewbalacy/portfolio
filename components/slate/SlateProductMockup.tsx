@@ -3,8 +3,7 @@
 import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
 
-// TODO: replace with the deployed Slate URL before going live
-const SLATE_URL = "https://slate-xi-vert.vercel.app/";
+const SLATE_URL = "https://slate-xi-vert.vercel.app/?demo=true";
 
 // ─── Static mockup data ──────────────────────────────────────────────────────
 
